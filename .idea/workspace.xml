@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0f3a1702-7464-4ad5-ac3e-a99fc2d8429d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="18" />
+    <option name="y" value="36" />
+    <option name="width" value="1252" />
+    <option name="height" value="669" />
+  </component>
+  <component name="ProjectId" id="1TF6oRVQZxgy6zTk19vUmUEaVdl" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.maddyhome.idea.vim.ui.VimEmulationConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0f3a1702-7464-4ad5-ac3e-a99fc2d8429d" name="Default Changelist" comment="" />
+      <created>1573035650135</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573035650135</updated>
+      <workItem from="1573035652080" duration="576000" />
+      <workItem from="1573040789829" duration="36000" />
+      <workItem from="1573043675545" duration="355000" />
+      <workItem from="1573047348758" duration="3000" />
+      <workItem from="1573052411349" duration="371000" />
+      <workItem from="1573233013203" duration="75000" />
+      <workItem from="1573294898943" duration="4340000" />
+      <workItem from="1573312456910" duration="8819000" />
+      <workItem from="1573384863001" duration="158000" />
+      <workItem from="1573385170945" duration="10000" />
+      <workItem from="1573412641447" duration="177000" />
+      <workItem from="1573484681006" duration="2673000" />
+      <workItem from="1573493146572" duration="11698000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

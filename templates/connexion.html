@@ -1,0 +1,217 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <section class="section">
+      <div class="container ">
+        <div class="content">
+          <div class="content__el content__el--big">
+            <h1 class="title title--big">Récolter les données</h1>
+            <h2 class="title title--small">Calculer ton émission</h2>
+            <p>IO est un projet de fontaine interactive où l’utilisateur va entrer ses différents pseudos de réseaux
+              sociaux et ainsi lui montrer l'empreinte carbone de ses différents comptes. En fonction de l'importance de l'empreinte, les fontaines se transformeront en un vrai show lumineux.</p>
+          </div>
+          <div class="content__el content__el--blue">
+            <h1 class="title title--big title_">Réseaux <br>sociaux</h1>
+            {% if error : %}
+              <p>Il y a eu un problème. Es-tu sûr de ton identifiant Instagam ou que ton profil est bien public ?</p>
+            {% else : %}
+              <p>Ton compte doit être public pour pouvoir calculer ton empreinte carbone.</p>
+            {% endif %}
+            <h2 class="title title--small">Entre tes identifianst ici 👇</h2>
+            <form action="">
+              <fieldset>
+                <ul class="form">
+                  <li class="form__el">
+                    <label class="form__label" for="snap">Snapchat</label>
+                    <input class="form__input" type="text" name="snapchat" id="snap" placeholder="id snapchat">
+                  </li>
+                  <li class="form__el">
+                    <label class="form__label" for="fb">Facebook</label>
+                    <input class="form__input" type="text" name="facebook" id="fb" placeholder="id facebook">
+                  </li>
+                  <li class="form__el">
+                    <label class="form__label" for="tt">TikTok</label>
+                    <input class="form__input" type="text" name="tiktok" id="tt" placeholder="id tik tok">
+                  </li>
+                  <li class="form__el">
+                    <label class="form__label" for="ig">Instagram</label>
+                    <input class="form__input" type="text" name="instagram" id="ig" placeholder="id instagram">
+                  </li>
+                </ul>
+              </fieldset>
+            </form>
+            <a class="link link-anim" id="submit" href="{{ url_for('resultats') }}">Analyser</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <div class="anim">
+    <ul class="circles">
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+      <li class="circles__el">
+        <div></div>
+      </li>
+    </ul>
+  </div>
+
+<script>
+  let urlLink = document.querySelector('#submit');
+  let igInput = document.querySelector('#ig');
+
+  igInput.addEventListener('input', () => {
+    urlLink.setAttribute('href', "{{ url_for('resultats') }}/" + igInput.value);
+  });
+</script>
+
+{% endblock %}
