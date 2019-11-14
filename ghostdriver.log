@@ -1,9 +1,39 @@
-[INFO  - 2019-11-13T11:35:16.178Z] GhostDriver - Main - running on port 59381
-[INFO  - 2019-11-13T11:35:16.390Z] Session [a9f10a00-0609-11ea-87be-010a597eccd1] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2019-11-13T11:35:16.390Z] Session [a9f10a00-0609-11ea-87be-010a597eccd1] - page.customHeaders:  - {}
-[INFO  - 2019-11-13T11:35:16.390Z] Session [a9f10a00-0609-11ea-87be-010a597eccd1] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2019-11-13T11:35:16.390Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a9f10a00-0609-11ea-87be-010a597eccd1
-[INFO  - 2019-11-13T11:40:16.191Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2019-11-13T11:45:16.214Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2019-11-13T11:50:16.224Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
-[INFO  - 2019-11-13T11:55:16.242Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T09:48:36.810Z] GhostDriver - Main - running on port 49300
+[INFO  - 2019-11-14T09:48:36.982Z] Session [ee0229d0-06c3-11ea-8abd-859c7ca466e3] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2019-11-14T09:48:36.982Z] Session [ee0229d0-06c3-11ea-8abd-859c7ca466e3] - page.customHeaders:  - {}
+[INFO  - 2019-11-14T09:48:36.982Z] Session [ee0229d0-06c3-11ea-8abd-859c7ca466e3] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"mac-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2019-11-14T09:48:36.982Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: ee0229d0-06c3-11ea-8abd-859c7ca466e3
+[INFO  - 2019-11-14T09:53:36.765Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T09:58:36.774Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:03:36.782Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:08:36.792Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:13:36.828Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:18:36.840Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:23:36.850Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:28:36.860Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:33:36.885Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:38:36.898Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:41:56.980Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:46:56.990Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:51:57.011Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+1465fb] - page.onError - stack:
+ [INFO  - 2019-11-14T10:43:36.909Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:46:53.240Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2019-11-14T10:47:13.768Z] Session [b0ac1b40-06c3-11ea-9a37-5b612a1465fb] - page.onError - msg: Error retrieving login status, fetch cancelled.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-11-14T10:47:13.768Z] Session [b0ac1b40-06c3-11ea-9a37-5b612a1465fb] - page.onError - stack:
+ [INFO  - 2019-11-14T10:48:36.928Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[INFO  - 2019-11-14T10:51:53.260Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2019-11-14T10:52:13.784Z] Session [b0ac1b40-06c3-11ea-9a37-5b612a1465fb] - page.onError - msg: Error retrieving login status, fetch cancelled.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-11-14T10:52:13.784Z] Session [b0ac1b40-06c3-11ea-9a37-5b612a1465fb] - page.onError - stack:
+ [INFO  - 2019-11-14T10:53:36.938Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+[ERROR - 2019-11-14T10:53:51.235Z] Session [ee0229d0-06c3-11ea-8abd-859c7ca466e3] - page.onError - msg: Error retrieving login status, fetch cancelled.
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-11-14T10:53:51.235Z] Session [ee0229d0-06c3-11ea-8abd-859c7ca466e3] - page.onError - stack:
+  b (https://connect.facebook.net/en_US/sdk.js?hash=720e0dea29ce0a63b524b112a88a5edf:52)
+
+  phantomjs://platform/console++.js:263 in error

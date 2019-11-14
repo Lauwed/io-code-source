@@ -21,24 +21,13 @@
 </head>
 
 <body>
- <main>
+ <main class="{% block class_main %}{% endblock %}">
     <header class="container">
       <div class="header">
         <div class="header__el">
           <a href="#">
             <img class="header__logo" src="{{ url_for('static', filename='assets/images/logotype.svg') }}" alt="logo de IO">
           </a>
-        </div>
-        <div class="header__el dropdown">
-          <button class="btn btn__language dropdown__btn">fr</button>
-          <ul class="dropdown__content">
-            <li class="dropdown__el">
-              <a href="">fr</a>
-            </li>
-            <li class="dropdown__el">
-              <a href="">en</a>
-            </li>
-          </ul>
         </div>
       </div>
     </header>

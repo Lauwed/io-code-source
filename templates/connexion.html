@@ -1,8 +1,10 @@
 {% extends "layout.html" %}
 
+{% block class_main %}main{% endblock %}
+
 {% block content %}
 
-    <section class="section">
+    <section class="section section--form">
       <div class="container ">
         <div class="content">
           <div class="content__el content__el--big">
@@ -13,8 +15,10 @@
           </div>
           <div class="content__el content__el--blue">
             <h1 class="title title--big title_">Réseaux <br>sociaux</h1>
-            {% if error : %}
-              <p>Il y a eu un problème. Es-tu sûr de ton identifiant Instagam ou que ton profil est bien public ?</p>
+            {% if error == "erreur_username" : %}
+              <p class="error">Il y a eu un problème. Es-tu sûr de ton identifiant Instagam ?</p>
+            {% elif error == "erreur_private" : %}
+              <p class="error">Il y a eu un problème. Es-tu sûr que ton compte est bien en public ?</p>
             {% else : %}
               <p>Ton compte doit être public pour pouvoir calculer ton empreinte carbone.</p>
             {% endif %}
@@ -49,6 +53,56 @@
 
   </main>
 
+
+  <section class="section section__facts hide">
+    <div class="container">
+      <ul class="facts">
+        <li class="fact">
+          <h2>Sais-tu ? ⚡️</h2>
+          <p>2019 est l'année où intenet a dépassé l'aviation civil en terme de pollution.</p>
+        </li>
+        <li class="fact">
+          <h2>Sais-tu ? ⚡️</h2>
+          <p>Une recherche google produit 7g de CO2.</p>
+        </li>
+        <li class="fact">
+          <h2>Sais-tu ? ⚡️</h2>
+          <p>80% des emails ne sont jamais ouverts.</p>
+        </li>
+        <li class="fact">
+          <h2>Sais-tu ? ⚡️</h2>
+          <p>Supprimer 30 emails équivaut à économiser une ampoule pendant 24 heures.</p>
+        </li>
+        <li class="fact">
+          <h2>Sais-tu ? ⚡️</h2>
+          <p>10 000 000 000 d'emails sont envoyés chaque heure. L'équivalent de 15 centrales nucléaires en
+            fonctionnement pendant une heure.</p>
+        </li>
+        <li class="fact">
+          <h2>Sais-tu ? ⚡️</h2>
+          <p>Supprimer 30 emails équivaut à économiser une ampoule pendant 24 heures.</p>
+        </li>
+        <li class="fact">
+          <h2>Sais-tu ? ⚡️</h2>
+          <p>Si internet était un pays, il serait 3ème au rang des plus gros pollueurs mondiaux derrière la Chine et
+            les États-unis.</p>
+        </li>
+        <li class="fact">
+          <h2>Sais-tu ? ⚡️</h2>
+          <p>Internet représente 2% de l'émission de CO2 dans le monde.</p>
+        </li>
+      </ul>
+      <div class="loading">
+        <div class="spinner">
+          <div class="bubble-1"></div>
+          <div class="bubble-2"></div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </section>
 
   <div class="anim">
     <ul class="circles">

@@ -1,49 +1,60 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="fr">
 
-{% block content %}
+<head>
+  <title>Erreur 404 | IO</title>
 
-    <section class="section">
-      <div class="container">
-        <div class="content content__results">
-          <h1 class="title title--big"><span>Voici ta consommation</span> <span class="results--username">{{ username }}</span></h1>
-          <div class="section__facts">
-            <ul class="results__facts">
-              <li class="results__bulle">
-                <h2>Sais-tu ?⚡️</h2>
-                <p>Un email envoyé correspond à 20g de CO2 émis dans l'atmosphère.</p>
-              </li>
-              <li class="results__bulle">
-                <h2>Sais-tu ?⚡️</h2>
-                <p>En moyenne, un internaute consomme 806 g par jour</p>
-              </li>
-            </ul>
-          </div>
-          <div class="results">
-            <ul class="results__el results--white">
-              <li><span>Ton émission</span></li>
-                <li><span class="results__number"><code id="finale-score">{{ results['tot_emission'] }}</code></span></li>
-              <li><span>g de CO2</span></li>
-            </ul>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <div class="results__reaction">{{ results['score'] }}</div>
+  <link rel="stylesheet" type="text/css" href="styles/app.css">
 
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="assets/images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+</head>
 
-            <ul class="results__el results--blue">
-                <li id="sn"><span><code>{{ results['sn_emission'] }} g</code></span></li>
-                <li id="fb"><span><code>{{ results['fb_emission'] }} g</code></span></li>
-                <li id="tt"><span><code>{{ results['tt_emission'] }} g</code></span></li>
-                <li id="ig"><span><code>{{ results['ig_emission'] }} g</code></span></li>
-            </ul>
-
-            <ul class="results__el results__text">
-              <li><span class="title title--small results__send">Appuie sur le bouton</span></li>
-              <li><span class="text__blue">pour envoyer ton score à la fontaine.</span></li>
-            </ul>
-          </div>
+<body>
+  <main>
+    <section class="not-found">
+      <div class="not-found__block">
+        <div class="not-found__circle">
+          <svg width="100%" viewbox="0 0 1000 1000">
+            <path fill="#1160d1">
+              <animate attributeName="d" dur="1000ms" fill="freeze" keyTimes="0; 0.8; 1" keySplines=".42 0 1 1;
+                                        0 0 .59 1;" values="M883,500c0,105.8-42.9,201.5-112.2,270.8S605.8,883,500,883s-201.5-42.9-270.8-112.2S117,605.8,117,500
+                            s42.9-201.5,112.2-270.8S394.2,117,500,117s201.5,42.9,270.8,112.2S883,394.2,883,500z;
+                                              
+                            M1000,500c0,105.8-159.9,201.5-229.2,270.8S605.8,883,500,883s-201.5-42.9-270.8-112.2S0,605.8,0,500
+                            s159.9-201.5,229.2-270.8S394.2,117,500,117s201.5,42.9,270.8,112.2S1000,394.2,1000,500z;
+                            
+                            M883,500c0,105.8-42.9,201.5-112.2,270.8S605.8,883,500,883s-201.5-42.9-270.8-112.2S117,605.8,117,500
+                            s42.9-201.5,112.2-270.8S394.2,117,500,117s201.5,42.9,270.8,112.2S883,394.2,883,500z" />
+            </path>
+          </svg>
         </div>
+
+        <h1 class="not-found__title">
+          <span>4</span>
+          <span>0</span>
+          <span>4</span>
+        </h1>
+
+        <div class="not-found__text">
+          <span>Page introuvable</span>
+          <a href="index.html" class="link">
+            Retour à l'accueil
+          </a>
+        </div>
+
       </div>
     </section>
-
 
 
   </main>
@@ -204,21 +215,9 @@
     </ul>
   </div>
 
-<script>
-  let scoreHTML = document.querySelector(".results__reaction");
-  let score = scoreHTML.innerHTML;
-  if(score >= 200) {
-    scoreHTML.innerHTML = '🏆';
-  }
-  else if(score < 200 && score >= 100) {
-    scoreHTML.innerHTML = '👍';
-  }
-  else if(score <= 100 && score > 50) {
-    scoreHTML.innerHTML = '😥';
-  }
-  else {
-    scoreHTML.innerHTML = '🤮';
-  }
-</script>
 
-{% endblock %}
+
+  <script src="scripts/app.js"></script>
+</body>
+
+</html>
