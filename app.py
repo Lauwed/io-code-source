@@ -1,14 +1,18 @@
+import os
 from flask import Flask, url_for, render_template, request, redirect
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import urllib2
-import time
-import serial
-import sys
+import urllib.request as urllib2
+from time import sleep
+
+# Load env vars
+from dotenv import load_dotenv
+load_dotenv()
 
 
 app = Flask(__name__)
@@ -46,53 +50,82 @@ with app.test_request_context() :
 
 
 def scrapping(name) :
-    if '@' in name :
-        name = name.replace('@', '')
-    insta_url = "https://www.instagram.com/" + name
+    insta_url = "https://www.instagram.com/"
 
     def getsize(uri):
         file = urllib2.urlopen(uri)
         return len(file.read())
 
-    driver = webdriver.PhantomJS()
+    # Start browser
+    s = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service = s)
     driver.get(insta_url)
+
+    sleep(1)
+
+    # Accept cookies
+    cookies_button = driver.find_element(By.CSS_SELECTOR, ".aOOlW.bIiDR")
+    cookies_button.click()
+    # Log into Instagram account
+    username_input = driver.find_element(By.CSS_SELECTOR, "input[name='username']")
+    password_input = driver.find_element(By.CSS_SELECTOR, "input[name='password']")
+
+    username_input.send_keys(os.environ.get('INSTA_USERNAME'))
+    password_input.send_keys(os.environ.get('INSTA_PASSWORD'))
+
+    login_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+    # login_button.click()
+    driver.execute_script("arguments[0].click();", login_button)
+
+    # Wait login time
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'img[alt="lauweded\'s profile picture"]')))
+
+    # Then, go on the user profil
+    if '@' in name :
+        name = name.replace('@', '')
+    insta_user_url = "https://www.instagram.com/" + name + "/"
+    driver.get(insta_user_url)
+
     element = None
     try :
-        element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".g47SY")))
+        element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'img[data-testid="user-avatar"]')))
+        print('User found')
     except :
-        print 'error'
+        print('error')
     finally :
         print (element, 'element Selenium quand le JS a completement charge')
 
+    print('Opening the HTML file to keep inner HTML of the page...');
     f = open("results.html", "w+")
+    print('Writing inside this file...')
     while True :
         try :
-            f.write(driver.find_element_by_class_name('SCxLW').get_attribute('innerHTML').encode('utf-8').strip())
+            f.write(str(driver.find_element(By.CSS_SELECTOR, 'main').get_attribute('innerHTML').encode('utf-8').strip()))
             break
         except :
             return {
                 "publications": 0
             }
     f.close()
+    print('Inner HTML OK !')
 
     with open("results.html") as fp:
         soup = BeautifulSoup(fp, "lxml")
 
     # Get numbers of followers
-    stats_account = soup.find_all(attrs={'class': 'g47SY'})
+    stats_account = soup.find_all(attrs={'class': 'k9GMp'})
 
-    print stats_account
+    print('Looking for numbers of publications and followers');
     followers = 0
     publications = 0
 
     for index, num in enumerate(stats_account):
-        if index == 0:
-            publications = num.text
-        if index == 1:
-            followers = num.text
-
-    print (followers, 'followers')
-    print (publications, 'publications')
+        # Numbers of publications
+        if index == 0 :
+            publications = num.find('span').find('span').text
+        # Numbers of followers
+        if index == 1 :
+            followers = num.find('a').find('span').text
 
     if 'k' in str(followers) :
         followers = followers.replace('k', '')
@@ -111,21 +144,18 @@ def scrapping(name) :
     print (publications, 'publications')
 
     # Get images and their sizes
-
+    print('Scrapping all the images of the account')
     images = soup.find_all('img')
     sum_sizes = 0
     image_count = 0
 
     for image in images:
-        print(image.get('src'))
         size = getsize(image.get('src')) * 4
-        size_str = str(size) + ' bytes'
-        print size_str
         sum_sizes += size
         image_count += 1
 
     print (sum_sizes, 'somme des tailles des images')
-    print (image_count, 'le nom d\'images')
+    print (image_count, 'le nombre d\'images')
 
     # Calculations
 
