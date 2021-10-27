@@ -2,6 +2,9 @@
 
 ![screencapture-127-0-0-1-5000-resultats-lauweded-2021-10-27-15_38_40](https://user-images.githubusercontent.com/15716589/139077075-661f64d9-40f0-4bbe-ab55-d813ecaf6bc5.png)
 
+[![GitHub open issues](https://img.shields.io/github/issues/Lauwed/io-code-source.svg)](https://github.com/Lauwed/io-code-source/issues?q=is%3Aopen+is%3Aissue)
+[![MIT License](https://img.shields.io/github/license/Lauwed/io-code-source.svg)](https://github.com/Lauwed/io-code-source/blob/master/LICENSE)
+
 ## Getting Started
 
 ### Activate the Virtual Environment
