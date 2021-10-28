@@ -8,11 +8,16 @@
 ## Getting Started
 
 ### Activate the Virtual Environment
+On macOS
 ```
 $ source venv\Scripts\activate
 ```
+On PowerShell
+```
+$ venv\Scripts\activate
+```
 
-Run this command to create your own Virtual Environment
+### Run this command to create your own Virtual Environment
 ```
 $ py -3 -m venv venv     
 ```
@@ -24,6 +29,14 @@ pip install beautifulsoup4
 pip install -U selenium
 pip install webdriver-manager
 pip install lxml
+pip install python-dotenv
+```
+
+### Create your `.env` file
+A `.env` file is needed because you need to be connected on your instagram account to be able to visite other people account. It should be created on the same folder then the file `app.py` and it should contain ;
+```
+INSTA_USERNAME=<your-username>
+INSTA_PASSWORD=<your-password>
 ```
 
 ### Launch Flask
@@ -52,3 +65,6 @@ Don't hesitate to read [this article](https://www.digitalocean.com/community/tut
 - The file `commands.py` contains the different commands for the Arduino. **WIP**
 - The file `results.html` contains temporarily the HTML page that the script is scraping.
 - The file `scraping.py` is the script test for scraping a page.
+
+## Troubleshooting
+### If you have problems with virtual environment or file problems, please try first to delete the `env` **folder**, then follow this guide : [Installing packages using pip and virtual environments](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
