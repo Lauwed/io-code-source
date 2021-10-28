@@ -61,6 +61,8 @@ def scrapping(name) :
     driver = webdriver.Chrome(service = s)
     driver.get(insta_url)
 
+    print('driver ok')
+
     sleep(1)
 
     # Accept cookies
